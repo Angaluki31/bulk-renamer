@@ -6,7 +6,7 @@ mode=""
 prefix=""
 
 usage() {
-    echo "Usage: bash renamer.sh -m <lower|spaces|prefix|number> [-p text] [-d] <folder>"
+    echo "Usage: bash renamer.sh -m <lower|upper|spaces|prefix|number> [-p text] [-d] <folder>"
     echo " -m rename mode"
     echo " -p text to add in prefix mode"
     echo " -d dry run (preview only, changes nothing)"
@@ -44,6 +44,7 @@ for path in "$folder"/*; do
 
     case "$mode" in 
         lower)  new="${old,,}" ;;
+        upper)  new="${old^^}" ;;
         spaces) new="${old// /_}" ;;
         prefix) new="${prefix}${old}" ;;
         number)

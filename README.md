@@ -13,6 +13,7 @@ bash renamer.sh -m <mode> [-p text]
 | Mode | Effect | Example |
 |------|--------|---------|
 | `lower` | Lowercase the name | `Photo.JPG` -> `photo.jpg` |
+| `upper` | Uppercase the name | `notes.txt` -> `NOTES.TXT` |
 | `spaces` | Replaces spaces with `_` |  `my file.txt` -> `my_file.txt` |
 | `prefix` | Add text to the start (needs `-p`) | `notes.txt` -> `2026_notes.txt` |
 | `number` | Number files, keep extension | `a.jpg` -> `001.jpg` |
